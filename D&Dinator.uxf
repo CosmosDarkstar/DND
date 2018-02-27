@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>792</x>
+      <y>128</y>
+      <w>144</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Driver
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>800</x>
+      <y>152</y>
+      <w>128</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>App
+--
+_+ main : void_
++ start : void &lt;&lt;override&gt;&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>464</x>
+      <y>296</y>
+      <w>112</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>View
+--
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>320</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Show
+--
+_- player : Player_
+--
+_+ update() : void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>248</x>
+      <y>416</y>
+      <w>704</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>Models
+--
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>256</x>
+      <y>440</y>
+      <w>248</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Player
+--
+- alignment : Alignment 
+- occupation : Profession
+- name : String
+- stats : StatsMap&lt;String, int&gt;
+- race : String
+-
++ Player() &lt;&lt;ctor&gt;&gt;
++ accessStat(key : String) : int
++ modifyStat(key : String, mod : int) : void
++ getName() : String
++ setName(name : String) : void
++ setProfesstion(occupation : Profession) : void
++ getProfession() : Profession
+- addBonuses() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>512</x>
+      <y>440</y>
+      <w>216</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Item
+--
+- items : StatsMap&lt;String, int&gt;
+- armor : StatsMap&lt;String, int&gt;
+- weapons : StatsMap&lt;String, int&gt;
+--
++ getItem(key : String) : StatsMap&lt;&gt;
++ getArmor(key : String) : StatsMap&lt;&gt;
++ getWeapon(key : String) : StatsMap&lt;&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>672</x>
+      <y>288</y>
+      <w>424</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>logic
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>688</x>
+      <y>312</y>
+      <w>200</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Logic
+-
+_- players : Hashmap &lt;String, Player&gt;_
+-
+_+ run() : void_
+_- initializeData() : void_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>368</y>
+      <w>216</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Enums
+--
+bg=magenta
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8</x>
+      <y>392</y>
+      <w>112</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Alignment
+-
+CHAOTIC_NEUTRAL
+CHAOTIC_GOOD
+CHAOTIC_EVIL
+LAWFUL_NEUTRAL
+LAWFUL_GOOD
+LAWFUL_EVIL
+TRUE_NEUTRAL
+NEUTRAL_GOOD
+NEUTRAL_EVIL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>128</x>
+      <y>400</y>
+      <w>80</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>DiceSides
+-
+TWENTY
+TEN
+PERCENTILE
+TWELVE
+SIX
+FOUR
+EIGHT
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>464</x>
+      <y>184</y>
+      <w>168</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Interfaces
+--
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>208</y>
+      <w>144</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Showable
+--
++ update() : void &lt;&lt;abstract&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>872</x>
+      <y>200</y>
+      <w>56</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>328</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>264</y>
+      <w>376</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0;450.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>736</x>
+      <y>680</y>
+      <w>208</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Magic
+--
+- spells : StatsMap&lt;String, int&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>736</x>
+      <y>560</y>
+      <w>208</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>StatsMap 
+--
+
+--
++ StatsMap() &lt;&lt;ctor&gt;&gt;
++ add(key : String, stat : int) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>936</x>
+      <y>312</y>
+      <w>152</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>RollDie
+-
+
+-
+_+ dieBag(d : DiceSides) : int_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>736</x>
+      <y>440</y>
+      <w>208</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Profession
+-
+- statBonus : StatsMap&lt;String, int&gt;
+--
++ getBonus(key : String) : int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>264</x>
+      <y>192</y>
+      <w>152</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>EmptyPackage
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>272</x>
+      <y>216</y>
+      <w>136</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>GSONifier
+-
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>240</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>56</x>
+      <y>520</y>
+      <w>216</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>250.0;110.0;10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>336</y>
+      <w>536</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>650.0;20.0;10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+</diagram>
